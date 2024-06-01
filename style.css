@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #787878;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  height: auto;
+  width: min(100%, 678px);
+  position: absolute;
+}
+
+.dot {
+  width: calc(500% / 687);
+  height: calc(500% / 378);
+  background-color: red;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Let's say the image height is height: 200px, width: 300px;
+We have a point that has its TOP LEFT corner at position (30px, 20px) where (0px, 0px) is TOP LEFT of the box
+Turn the point into a percentage and it'll work out fine
+*/
